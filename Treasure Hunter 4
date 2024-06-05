@@ -1,0 +1,35 @@
+Input consists of 3 integers. The first input corresponds to the number of gold coins in the treasure. The second input corresponds to Ben's share percentage and the last input is Blackbeard's share percentage.
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+The output consists of three integers. The first output integer corresponds to Long Ben's share. The second integer corresponds to Blackbeard's share. The last integer corresponds to other pirates share.
+
+Sample Input 0
+
+729
+65
+87
+Sample Output 0
+
+473
+222
+11#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    int lb=(a*b)/100;
+    int rem=a-lb;
+    int bb=(rem*c)/100;
+    int others=(rem-bb)/3;
+    printf("%d\n%d\n%d\n",lb,bb,others);
+    return 0;
+}
