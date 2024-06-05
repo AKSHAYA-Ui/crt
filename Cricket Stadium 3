@@ -1,0 +1,35 @@
+Input consists of 2 integers. The first integer corresponds to the length of the ground and the second integer corresponds to the breadth of the ground.
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Output Consists of two integers. The first integer corresponds to the perimeter. The second integer corresponds to the quantity of carpet required.
+
+Sample Input 0
+
+50
+20
+Sample Output 0
+
+140
+1000
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+ 
+    int l,b;
+    scanf("%d%d",&l,&b);
+    int x=(2*(l+b));
+    printf("%d\n",x);
+    int y=l*b;
+    printf("%d",y);
+    return 0;
+}
