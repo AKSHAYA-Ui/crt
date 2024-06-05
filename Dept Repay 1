@@ -1,0 +1,51 @@
+Input consists of 3 integers. The first integer corresponds to the principal amount borrowed by Alice. The second integer corresponds to the rate of interest The third integer corresponds to the number of years.
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+The output consists of 4 floating point values. The first value corresponds to the interest. The second corresponds to the amount. The third value corresponds to the discount. The last value corresponds to the final settlement. All floating point values are to be rounded off to two decimal places
+
+Sample Input 0
+
+100
+1
+10
+Sample Output 0
+
+10.00
+110.00
+0.20
+109.80
+Sample Input 1
+
+10000
+10
+5
+Sample Output 1
+
+5000.00
+15000.00
+100.00
+14900.00
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() { 
+    int p,t,r;
+    scanf("%d%d%d",&p,&t,&r);
+    float r1=p*t*r/100;
+    printf("%.2f\n",r1);
+    float r2=p+r1;
+    printf("%.2f\n",r2);
+    float r3=r1*2/100;
+    printf("%.2f\n",r3);
+    float r4=r2-r3;
+    printf("%.2f",r4);
+    
+    return 0;
+}
