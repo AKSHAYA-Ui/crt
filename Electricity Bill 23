@@ -1,0 +1,49 @@
+Input Format
+
+Input consists of one integer. This corresponds to the units consumed.
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+The output consists of one integer. This corresponds to the electricity bill in rupees.
+
+Sample Input 0
+
+200
+Sample Output 0
+
+Rs.100
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int u;
+    scanf("%d",&u);
+    float r;
+    if(u<=200)
+    {
+        r=(float)u*(0.5);
+    }
+    else if(u<=400)
+    {
+        r=(float)u*(0.65)+100;
+    }
+    else if(u<=600)
+    {
+        r=(float)u*(0.80)+200;
+    }
+    else
+    {
+        r=(float)u*(1.25)+425;
+    }
+    printf("Rs.%.0f",r);
+    return 0;
+}
