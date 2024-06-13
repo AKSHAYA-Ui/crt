@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+char str1[50],str2[50];
+scanf("%s",str1);
+int n,i,j=0;
+n=strlen(str1);
+for(i=0;i>=0;i--)
+{
+    str2[j]=str1[i];
+    j++;
+}
+i=strcmp(str1,str2);
+if(i==0)
+printf("Palindrome");
+else
+printf("Not a Palindrome");
+}
