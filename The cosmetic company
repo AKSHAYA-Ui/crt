@@ -1,0 +1,40 @@
+Input Format
+Read n denoting the product ID
+Constraints
+1<=n<=10^7
+Output Forma
+Print an integer representing the ID …..oldest product present in the batch.
+Sample Input 0
+345627
+Sample Output 0
+2
+Explanation 0
+The smallest product ID is 2. Hence it is the oldest product.
+Sample Input 1
+341827
+Sample Output 1
+1
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() 
+{
+  int a;
+    scanf("%d",&a);
+    int min=10;
+    while(a!=0)
+    {
+        int r=a%10;
+        if(r<min)
+        {
+            min=r;
+        }
+        a=a/10;
+    }
+    printf("%d",min);
+    
+    return 0;
+}
+​
