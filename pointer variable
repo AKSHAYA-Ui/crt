@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+int a=56;
+    printf("values of a=%d\n",a);
+    printf("values of a=%u\n",&a);
+    printf("values of a=%d\n",*(&a));
+
+    return 0;
+}
